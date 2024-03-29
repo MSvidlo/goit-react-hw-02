@@ -1,5 +1,5 @@
 import React from 'react';
-import css from './Description.css'
+import css from './Description.module.css'
 
 const Description = () => {
     return (   <div className={css.cafe}> <h1 className={css.nameOfCafe}>

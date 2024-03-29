@@ -1,7 +1,7 @@
-import css from './FriendListItem.module.css';
+import css from './Options.module.css';
 import clsx from 'clsx';
 
-const Options = ({ name, isOnline, avatar }) => {
-    return ()
+const Options = ({}) => {
+   
 };
 export default Options;
