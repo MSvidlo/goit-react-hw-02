@@ -1,6 +1,6 @@
 
-import css from './Profile.module.css';
-const Profile = (props) => {
+import css from './Feedback.module.css';
+const Feedback = (props) => {
     return (<div className={css.profile}>
         <div>
             <img className={css.image}
@@ -30,4 +30,4 @@ const Profile = (props) => {
     )
 };
 
-export default Profile;
+export default Feedback;
