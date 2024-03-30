@@ -16,14 +16,15 @@ const App = () => {
       [feedbackType]: prevReviews[feedbackType] + 1,
     }));
   };
-
+ 
   const totalFeedback = reviews.good + reviews.neutral + reviews.bad;
   const hasFeedback = totalFeedback > 0;
-
+const positive = Math.round((reviews.good/ totalFeedback) * 100);
   const resetFeedback = () => {
     setReviews({ good: 0, neutral: 0, bad: 0 });
   };
-
+ 
+  
   return (
     <>
       <Description />
@@ -36,7 +37,7 @@ const App = () => {
         resetFeedback={resetFeedback}
       />
       {hasFeedback ? (
-        <Feedback reviews={reviews} total={totalFeedback} />
+        <Feedback reviews={reviews} total={totalFeedback} positive={positive} />
       ) : (
         <Notification />
       )}
