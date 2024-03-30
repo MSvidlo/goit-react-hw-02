@@ -6,10 +6,15 @@ import Options from './components/Options/Options'
 import Description from './components/Description/Description';
 import Notification from './components/Notifacation/Notification';
 import { useState } from 'react';
-
+import { useEffect } from 'react';
 const App = () => {
-  const [reviews, setReviews] = useState({ good: 0, neutral: 0, bad: 0 });
+  const [reviews, setReviews] = useState(
+    JSON.parse(localStorage.getItem('reviews')) ||{ good: 0, neutral: 0, bad: 0 });
 
+ useEffect(() => {
+    localStorage.setItem('reviews', JSON.stringify(reviews));
+  }, [reviews]); 
+  
   const updateFeedback = (feedbackType) => {
     setReviews((prevReviews) => ({
       ...prevReviews,

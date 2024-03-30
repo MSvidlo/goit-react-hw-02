@@ -3,7 +3,7 @@ import clsx from 'clsx';
 
 const Options = ({ firstButton, secondButton, thirdButton, updateFeedback, totalFeedback, resetFeedback }) => {
   return (
-    <div>
+    <div className={css.container}>
       <button onClick={() => updateFeedback('good')}>{firstButton}</button>
       <button onClick={() => updateFeedback('neutral')}>{secondButton}</button>
       <button onClick={() => updateFeedback('bad')}>{thirdButton}</button>
